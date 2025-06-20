@@ -1,0 +1,266 @@
+/* Import Material Symbols font */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Base button styles */
+.button {
+  /* Reset default button styles */
+  appearance: none;
+  border: none;
+  background: none;
+  margin: 0;
+  font: inherit;
+  
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  position: relative;
+  
+  /* Box model */
+  padding: var(--space-s) var(--space-l);
+  border-radius: var(--space-s);
+  overflow: hidden;
+  
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Interaction */
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+  
+  /* Ensure minimum touch target on mobile */
+  min-height: 44px;
+}
+
+/* Focus styles for keyboard navigation */
+.button:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Text wrapper to prevent selection */
+.button__text {
+  pointer-events: none;
+}
+
+/* Icon styles */
+.button__icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
+/* Icon positioning */
+.button__icon--left {
+  margin-right: var(--space-xs);
+}
+
+.button__icon--right {
+  margin-left: var(--space-xs);
+  order: 1;
+}
+
+/* Variant: Primary */
+.button--primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-primary);
+}
+
+.button--primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button--primary:active:not(:disabled) {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
+
+/* Variant: Secondary */
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  box-shadow: inset 0 0 0 2px var(--color-brand-primary);
+}
+
+.button--secondary:hover:not(:disabled) {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-primary);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button--secondary:active:not(:disabled) {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
+
+/* Variant: Danger */
+.button--danger {
+  background-color: var(--color-state-danger);
+  color: var(--color-text-on-primary);
+}
+
+.button--danger:hover:not(:disabled) {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 12px rgba(198, 40, 40, 0.2);
+}
+
+.button--danger:active:not(:disabled) {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
+
+/* Size: Small */
+.button--small {
+  padding: var(--space-xs) var(--space-m);
+  font-size: 0.875rem;
+  border-radius: 6px;
+  min-height: 32px;
+}
+
+.button--small .button__icon {
+  font-size: 1.1em;
+}
+
+/* Size: Large */
+.button--large {
+  padding: var(--space-m) var(--space-xl);
+  font-size: 1.125rem;
+  border-radius: 12px;
+  min-height: 48px;
+}
+
+.button--large .button__icon {
+  font-size: 1.3em;
+}
+
+/* State: Disabled */
+.button:disabled {
+  background-color: #BDBDBD;
+  color: #757575;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}
+
+.button--secondary:disabled {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #BDBDBD;
+  color: #757575;
+}
+
+.button--danger:disabled {
+  background-color: #BDBDBD;
+  color: #757575;
+}
+
+/* Modifier: Full Width */
+.button--full-width {
+  width: 100%;
+}
+
+/* Modifier: Icon Only */
+.button--icon-only {
+  padding: var(--space-s);
+  aspect-ratio: 1;
+}
+
+.button--icon-only .button__icon {
+  margin: 0;
+}
+
+.button--icon-only.button--small {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.button--icon-only.button--medium {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.button--icon-only.button--large {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+/* Loading state (future enhancement) */
+.button--loading {
+  color: transparent;
+  pointer-events: none;
+}
+
+.button--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 0.8s linear infinite;
+}
+
+@keyframes button-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Ensure touch-friendly sizing on mobile */
+  .button {
+    min-width: 44px;
+  }
+  
+  /* Stack buttons in groups on mobile */
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .button-group .button {
+    width: 100%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .button {
+    border: 1px solid currentColor;
+  }
+}

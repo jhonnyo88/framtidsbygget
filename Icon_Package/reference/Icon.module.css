@@ -1,0 +1,282 @@
+/* Import Material Symbols font */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Base icon styles */
+.icon {
+  /* Reset button styles if interactive */
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  
+  /* Material Symbols setup */
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  
+  /* Default settings */
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  
+  /* Transitions */
+  transition: all 0.2s ease-in-out;
+  
+  /* Prevent text selection */
+  user-select: none;
+}
+
+/* Size variants */
+.icon--small {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
+.icon--medium {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon--large {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 40;
+}
+
+.icon--xlarge {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+/* Color variants */
+.icon--default {
+  color: var(--color-text-secondary);
+}
+
+.icon--primary {
+  color: var(--color-brand-primary);
+}
+
+.icon--secondary {
+  color: var(--color-text-secondary);
+}
+
+.icon--success {
+  color: var(--color-state-success);
+}
+
+.icon--error {
+  color: var(--color-state-danger);
+}
+
+.icon--warning {
+  color: var(--color-state-warning);
+}
+
+.icon--info {
+  color: var(--color-state-info);
+}
+
+.icon--on-primary {
+  color: var(--color-text-on-primary);
+}
+
+/* Interactive states */
+.icon--interactive {
+  cursor: pointer;
+  position: relative;
+}
+
+.icon--interactive:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.icon--interactive:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.icon--interactive:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove focus outline for mouse users */
+.icon--interactive:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Disabled state */
+.icon:disabled,
+.icon--disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Animation: Spinning */
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon--spinning {
+  animation: icon-spin 2s linear infinite;
+}
+
+/* Prevent hover effects while spinning */
+.icon--spinning:hover {
+  transform: none;
+}
+
+/* Animation: Pulse */
+@keyframes icon-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.icon--pulse {
+  animation: icon-pulse 2s ease-in-out infinite;
+}
+
+/* Touch target sizing for interactive icons */
+.icon--interactive::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Adjust touch targets for different sizes */
+.icon--interactive.icon--small::before {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--interactive.icon--large::before {
+  width: 48px;
+  height: 48px;
+}
+
+.icon--interactive.icon--xlarge::before {
+  width: 64px;
+  height: 64px;
+}
+
+/* Icon in button context */
+button .icon {
+  pointer-events: none;
+}
+
+/* Icon with text spacing */
+.icon + span,
+span + .icon {
+  margin-left: var(--space-xs);
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .icon {
+    font-weight: 500;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 500,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+  
+  .icon--interactive:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .icon--default {
+    color: var(--color-text-secondary-dark, #a0a0a0);
+  }
+  
+  .icon--primary {
+    color: var(--color-brand-primary-dark, #64b5f6);
+  }
+  
+  /* Adjust other colors for dark mode */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+  
+  .icon--spinning,
+  .icon--pulse {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .icon {
+    color: #000 !important;
+  }
+  
+  /* Hide decorative icons in print */
+  .icon[aria-hidden="true"] {
+    display: none;
+  }
+}

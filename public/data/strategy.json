@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "title": "Sveriges Digitaliseringsstrategi",
+    "description": "Interaktiv kunskapsträd för Framtidsbygget",
+    "lastUpdated": "2024-01-01",
+    "author": "Framtidsbygget Development Team"
+  },
+  "rootNode": "digital_transformation",
+  "nodes": [
+    {
+      "id": "digital_transformation",
+      "title": "Digital Transformation",
+      "description": "Sveriges väg mot digital framtid och hållbar digitalisering av samhället",
+      "status": "unlocked",
+      "position": { "x": 0, "y": 0 },
+      "level": 0,
+      "children": ["digital_forvaltning", "digital_kompetens", "digital_naringslivs", "digital_infrastruktur", "cybersecurity_resilience"],
+      "relatedGame": null,
+      "icon": "hub",
+      "color": "#003D82"
+    },
+    {
+      "id": "digital_forvaltning",
+      "title": "Digital Förvaltning",
+      "description": "Effektiv och säker offentlig sektor med samverkan och medborgarnära tjänster",
+      "status": "locked",
+      "position": { "x": -300, "y": 150 },
+      "level": 1,
+      "children": ["ena_infrastruktur", "sakerhet_integritet", "anvandbarhet_tillganglighet"],
+      "relatedGame": "pussel-spel-datasystem",
+      "icon": "account_balance",
+      "color": "#0288D1",
+      "unlockConditions": {
+        "gameCompletion": null,
+        "prerequisiteNodes": ["digital_transformation"]
+      }
+    },
+    {
+      "id": "ena_infrastruktur",
+      "title": "En Sammanhållen Infrastruktur",
+      "description": "Gemensam digital infrastruktur för effektiv datadelning mellan myndigheter",
+      "status": "locked",
+      "position": { "x": -450, "y": 300 },
+      "level": 2,
+      "children": ["standardisering", "interoperabilitet"],
+      "relatedGame": "pussel-spel-datasystem",
+      "icon": "share",
+      "color": "#0288D1",
+      "unlockConditions": {
+        "gameCompletion": "pussel-spel-datasystem",
+        "prerequisiteNodes": ["digital_forvaltning"]
+      }
+    },
+    {
+      "id": "sakerhet_integritet",
+      "title": "Säkerhet och Integritet",
+      "description": "Robust cybersäkerhet och skydd av personlig integritet i digital förvaltning",
+      "status": "locked",
+      "position": { "x": -250, "y": 300 },
+      "level": 2,
+      "children": ["gdpr_compliance", "cybersecurity_protocols"],
+      "relatedGame": "pussel-spel-datasystem",
+      "icon": "shield",
+      "color": "#C62828",
+      "unlockConditions": {
+        "gameCompletion": "pussel-spel-datasystem",
+        "prerequisiteNodes": ["digital_forvaltning"]
+      }
+    },
+    {
+      "id": "anvandbarhet_tillganglighet",
+      "title": "Användbarhet och Tillgänglighet",
+      "description": "Digital inkludering och tillgängliga digitala tjänster för alla medborgare",
+      "status": "locked",
+      "position": { "x": -150, "y": 300 },
+      "level": 2,
+      "children": ["digital_delaktighet", "universell_utformning"],
+      "relatedGame": "valfards-dilemma",
+      "icon": "accessibility",
+      "color": "#2E7D32",
+      "unlockConditions": {
+        "gameCompletion": "valfards-dilemma",
+        "prerequisiteNodes": ["digital_forvaltning"]
+      }
+    },
+    {
+      "id": "digital_kompetens",
+      "title": "Digital Kompetens",
+      "description": "Bredda och fördjupa digital kompetens för individer, organisationer och samhälle",
+      "status": "locked",
+      "position": { "x": -100, "y": 150 },
+      "level": 1,
+      "children": ["baskompetens", "breddkompetens", "spetskompetens"],
+      "relatedGame": "kompetensresan",
+      "icon": "school",
+      "color": "#8E24AA",
+      "unlockConditions": {
+        "gameCompletion": null,
+        "prerequisiteNodes": ["digital_transformation"]
+      }
+    },
+    {
+      "id": "baskompetens",
+      "title": "Digital Baskompetens",
+      "description": "Grundläggande digitala färdigheter för alla medborgare och medarbetare",
+      "status": "locked",
+      "position": { "x": -200, "y": 300 },
+      "level": 2,
+      "children": ["medborgarservice_digital", "grundlaggande_it"],
+      "relatedGame": "kompetensresan",
+      "icon": "book",
+      "color": "#8E24AA",
+      "unlockConditions": {
+        "gameCompletion": "kompetensresan",
+        "prerequisiteNodes": ["digital_kompetens"]
+      }
+    },
+    {
+      "id": "breddkompetens",
+      "title": "Digital Breddkompetens",
+      "description": "Tvärsektoriell digital kompetens för organisationer och branschöverskridande samarbete",
+      "status": "locked",
+      "position": { "x": -100, "y": 300 },
+      "level": 2,
+      "children": ["digital_transformation_ledning", "dataanalys_visualisering"],
+      "relatedGame": "kompetensresan",
+      "icon": "psychology",
+      "color": "#8E24AA",
+      "unlockConditions": {
+        "gameCompletion": "kompetensresan",
+        "prerequisiteNodes": ["digital_kompetens"]
+      }
+    },
+    {
+      "id": "spetskompetens",
+      "title": "Digital Spetskompetens",
+      "description": "Avancerad teknisk expertis inom AI, cybersäkerhet och innovativa teknologier",
+      "status": "locked",
+      "position": { "x": 0, "y": 300 },
+      "level": 2,
+      "children": ["ai_machine_learning", "advanced_cybersecurity"],
+      "relatedGame": "kompetensresan",
+      "icon": "precision_manufacturing",
+      "color": "#8E24AA",
+      "unlockConditions": {
+        "gameCompletion": "kompetensresan",
+        "prerequisiteNodes": ["digital_kompetens"]
+      }
+    },
+    {
+      "id": "digital_naringslivs",
+      "title": "Digitalt Näringsliv",
+      "description": "Stärka svenska företags konkurrenskraft genom digital innovation och entreprenörskap",
+      "status": "locked",
+      "position": { "x": 100, "y": 150 },
+      "level": 1,
+      "children": ["innovation_ekosystem", "digital_handelsmiljo", "hallbar_digitalisering"],
+      "relatedGame": "ekosystembyggaren",
+      "icon": "trending_up",
+      "color": "#FF8F00",
+      "unlockConditions": {
+        "gameCompletion": null,
+        "prerequisiteNodes": ["digital_transformation"]
+      }
+    },
+    {
+      "id": "innovation_ekosystem",
+      "title": "Innovationsekosystem",
+      "description": "Främja startup-miljöer, riskkapital och samverkan mellan akademi och näringsliv",
+      "status": "locked",
+      "position": { "x": 0, "y": 300 },
+      "level": 2,
+      "children": ["startup_acceleratorer", "forsknings_samverkan"],
+      "relatedGame": "ekosystembyggaren",
+      "icon": "rocket_launch",
+      "color": "#FF8F00",
+      "unlockConditions": {
+        "gameCompletion": "ekosystembyggaren",
+        "prerequisiteNodes": ["digital_naringslivs"]
+      }
+    },
+    {
+      "id": "digital_handelsmiljo",
+      "title": "Digital Handelsmiljö",
+      "description": "Moderna regelverk och digitala plattformar för e-handel och digitala tjänster",
+      "status": "locked",
+      "position": { "x": 100, "y": 300 },
+      "level": 2,
+      "children": ["e_handel_regler", "digital_identitet"],
+      "relatedGame": "ekosystembyggaren",
+      "icon": "storefront",
+      "color": "#FF8F00",
+      "unlockConditions": {
+        "gameCompletion": "ekosystembyggaren",
+        "prerequisiteNodes": ["digital_naringslivs"]
+      }
+    },
+    {
+      "id": "hallbar_digitalisering",
+      "title": "Hållbar Digitalisering",
+      "description": "Miljövänlig digitalisering som bidrar till klimatmålen och circular economy",
+      "status": "locked",
+      "position": { "x": 200, "y": 300 },
+      "level": 2,
+      "children": ["grona_datacenter", "circular_digital_economy"],
+      "relatedGame": "ekosystembyggaren",
+      "icon": "eco",
+      "color": "#2E7D32",
+      "unlockConditions": {
+        "gameCompletion": "ekosystembyggaren",
+        "prerequisiteNodes": ["digital_naringslivs"]
+      }
+    },
+    {
+      "id": "digital_infrastruktur",
+      "title": "Digital Infrastruktur",
+      "description": "Robust och tillgänglig digital infrastruktur för hela landet",
+      "status": "locked",
+      "position": { "x": 300, "y": 150 },
+      "level": 1,
+      "children": ["bredband_5g", "edge_computing", "digital_tvillingar"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "router",
+      "color": "#0097A7",
+      "unlockConditions": {
+        "gameCompletion": null,
+        "prerequisiteNodes": ["digital_transformation"]
+      }
+    },
+    {
+      "id": "bredband_5g",
+      "title": "Bredband och 5G",
+      "description": "Nationell täckning av höghastighetsinternet och 5G-nätverk",
+      "status": "locked",
+      "position": { "x": 200, "y": 300 },
+      "level": 2,
+      "children": ["fiber_utbyggnad", "5g_nationellt"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "signal_cellular_alt",
+      "color": "#0097A7",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["digital_infrastruktur"]
+      }
+    },
+    {
+      "id": "edge_computing",
+      "title": "Edge Computing",
+      "description": "Decentraliserad databehandling för låg latens och ökad effektivitet",
+      "status": "locked",
+      "position": { "x": 300, "y": 300 },
+      "level": 2,
+      "children": ["edge_nodes", "latency_optimization"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "cloud_sync",
+      "color": "#0097A7",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["digital_infrastruktur"]
+      }
+    },
+    {
+      "id": "digital_tvillingar",
+      "title": "Digitala Tvillingar",
+      "description": "Digital representation av fysiska system för optimering och övervakning",
+      "status": "locked",
+      "position": { "x": 400, "y": 300 },
+      "level": 2,
+      "children": ["smart_cities", "industrial_iot"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "device_hub",
+      "color": "#0097A7",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["digital_infrastruktur"]
+      }
+    },
+    {
+      "id": "cybersecurity_resilience",
+      "title": "Cybersäkerhet och Resiliens",
+      "description": "Nationell cybersäkerhet och förmåga att hantera digitala hot och kriser",
+      "status": "locked",
+      "position": { "x": 500, "y": 150 },
+      "level": 1,
+      "children": ["nationell_cybersakerhet", "incident_response", "resilient_systems"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "security",
+      "color": "#C62828",
+      "unlockConditions": {
+        "gameCompletion": null,
+        "prerequisiteNodes": ["digital_transformation"]
+      }
+    },
+    {
+      "id": "nationell_cybersakerhet",
+      "title": "Nationell Cybersäkerhet",
+      "description": "Centraliserad cybersäkerhetskapacitet för skydd av kritisk infrastruktur",
+      "status": "locked",
+      "position": { "x": 400, "y": 300 },
+      "level": 2,
+      "children": ["cert_se", "cyber_defence"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "gpp_good",
+      "color": "#C62828",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["cybersecurity_resilience"]
+      }
+    },
+    {
+      "id": "incident_response",
+      "title": "Incident Response",
+      "description": "Snabb respons och återställning vid cyberincidenter och systemstörningar",
+      "status": "locked",
+      "position": { "x": 500, "y": 300 },
+      "level": 2,
+      "children": ["crisis_management", "backup_systems"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "emergency",
+      "color": "#C62828",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["cybersecurity_resilience"]
+      }
+    },
+    {
+      "id": "resilient_systems",
+      "title": "Resilienta System",
+      "description": "Redundanta och självreparerande system för kontinuerlig drift",
+      "status": "locked",
+      "position": { "x": 600, "y": 300 },
+      "level": 2,
+      "children": ["redundancy_planning", "self_healing"],
+      "relatedGame": "konnektivitetsvakten",
+      "icon": "auto_fix_high",
+      "color": "#C62828",
+      "unlockConditions": {
+        "gameCompletion": "konnektivitetsvakten",
+        "prerequisiteNodes": ["cybersecurity_resilience"]
+      }
+    }
+  ],
+  "connections": [
+    { "from": "digital_transformation", "to": "digital_forvaltning", "type": "primary" },
+    { "from": "digital_transformation", "to": "digital_kompetens", "type": "primary" },
+    { "from": "digital_transformation", "to": "digital_naringslivs", "type": "primary" },
+    { "from": "digital_transformation", "to": "digital_infrastruktur", "type": "primary" },
+    { "from": "digital_transformation", "to": "cybersecurity_resilience", "type": "primary" },
+    
+    { "from": "digital_forvaltning", "to": "ena_infrastruktur", "type": "secondary" },
+    { "from": "digital_forvaltning", "to": "sakerhet_integritet", "type": "secondary" },
+    { "from": "digital_forvaltning", "to": "anvandbarhet_tillganglighet", "type": "secondary" },
+    
+    { "from": "digital_kompetens", "to": "baskompetens", "type": "secondary" },
+    { "from": "digital_kompetens", "to": "breddkompetens", "type": "secondary" },
+    { "from": "digital_kompetens", "to": "spetskompetens", "type": "secondary" },
+    
+    { "from": "digital_naringslivs", "to": "innovation_ekosystem", "type": "secondary" },
+    { "from": "digital_naringslivs", "to": "digital_handelsmiljo", "type": "secondary" },
+    { "from": "digital_naringslivs", "to": "hallbar_digitalisering", "type": "secondary" },
+    
+    { "from": "digital_infrastruktur", "to": "bredband_5g", "type": "secondary" },
+    { "from": "digital_infrastruktur", "to": "edge_computing", "type": "secondary" },
+    { "from": "digital_infrastruktur", "to": "digital_tvillingar", "type": "secondary" },
+    
+    { "from": "cybersecurity_resilience", "to": "nationell_cybersakerhet", "type": "secondary" },
+    { "from": "cybersecurity_resilience", "to": "incident_response", "type": "secondary" },
+    { "from": "cybersecurity_resilience", "to": "resilient_systems", "type": "secondary" },
+    
+    { "from": "sakerhet_integritet", "to": "nationell_cybersakerhet", "type": "synergy" },
+    { "from": "spetskompetens", "to": "innovation_ekosystem", "type": "synergy" },
+    { "from": "bredband_5g", "to": "edge_computing", "type": "synergy" },
+    { "from": "digital_handelsmiljo", "to": "digital_identitet", "type": "synergy" }
+  ],
+  "progressionRules": {
+    "unlockOnGameCompletion": {
+      "pussel-spel-datasystem": ["ena_infrastruktur", "sakerhet_integritet"],
+      "valfards-dilemma": ["anvandbarhet_tillganglighet", "digital_delaktighet"],
+      "kompetensresan": ["baskompetens", "breddkompetens", "spetskompetens"],
+      "konnektivitetsvakten": ["bredband_5g", "edge_computing", "nationell_cybersakerhet", "incident_response"],
+      "ekosystembyggaren": ["innovation_ekosystem", "digital_handelsmiljo", "hallbar_digitalisering"]
+    },
+    "masteryConditions": {
+      "perfectScore": ["Perfekt genomförande av uppdraget"],
+      "synergyUnlock": ["Upplåsning av strategisk synergi"],
+      "multipleCompletions": ["Genomfört uppdraget flera gånger med olika strategier"]
+    }
+  },
+  "gameRelationships": {
+    "pussel-spel-datasystem": {
+      "primaryNodes": ["digital_forvaltning", "ena_infrastruktur", "sakerhet_integritet"],
+      "description": "Praktiserar säker datadelning och sammanhållen infrastruktur"
+    },
+    "valfards-dilemma": {
+      "primaryNodes": ["anvandbarhet_tillganglighet", "digital_delaktighet"],
+      "description": "Utforskar digital inkludering och etiska överväganden"
+    },
+    "kompetensresan": {
+      "primaryNodes": ["digital_kompetens", "baskompetens", "breddkompetens", "spetskompetens"],
+      "description": "Utvecklar organisatorisk digital kapacitet"
+    },
+    "konnektivitetsvakten": {
+      "primaryNodes": ["digital_infrastruktur", "cybersecurity_resilience", "incident_response"],
+      "description": "Hanterar kritisk infrastruktur och krishantering"
+    },
+    "ekosystembyggaren": {
+      "primaryNodes": ["digital_naringslivs", "innovation_ekosystem", "hallbar_digitalisering"],
+      "description": "Bygger nationell digital konkurrenskraft och innovation"
+    }
+  }
+}
